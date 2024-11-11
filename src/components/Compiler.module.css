@@ -1,13 +1,14 @@
 /* src/components/Compiler.module.css */
 .compiler {
     padding: 20px;
-    background-color: #1a1f36; /* Dark Blue background for the whole component */
+    background-color: #000000; /* Pure black background for the whole component */
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     gap: 15px;
     color: #f1f1f1;
+    max-width: 100%; /* Ensure it doesn't overflow on mobile */
 }
 
 .compiler h2 {
@@ -15,16 +16,18 @@
     color: #f1f1f1;
     margin-bottom: 10px;
     font-weight: 600;
+    text-align: center;
 }
 
 .editor {
     height: 300px;
     overflow-y: auto;
-    background-color: #1a1f36; /* Dark blue background for the editor */
-    color: #f1f1f1; /* Light text color for contrast */
+    background-color: #000000; /* Black background for the editor */
+    color: #f1f1f1;
     font-size: 1em;
-    margin-bottom: 10px;
     border-radius: 8px;
+    width: 100%; /* Full width by default */
+    max-width: 100%;
 }
 
 .button {
@@ -53,4 +56,22 @@
     white-space: pre-wrap;
     min-height: 60px;
     font-family: monospace;
+    max-width: 100%;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .compiler {
+        padding: 10px;
+    }
+    .editor {
+        height: 200px; /* Reduce height slightly on smaller screens */
+        font-size: 0.9em; /* Slightly smaller font on mobile */
+    }
+    .button {
+        width: 100%; /* Make button full width on mobile */
+    }
+    .output {
+        font-size: 0.85em; /* Smaller font in output on mobile */
+    }
 }
