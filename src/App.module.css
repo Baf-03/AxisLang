@@ -1,0 +1,12 @@
+/* src/App.module.css */
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #1a1f36; /* Dark Blue background */
+  color: #f1f1f1;
+}
