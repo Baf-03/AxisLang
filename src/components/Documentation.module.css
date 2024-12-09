@@ -1,45 +1,64 @@
-/* src/components/Documentation.module.css */
 .documentation {
     padding: 20px;
-    background-color: #14213d; /* Dark blue background */
+    background-color: #1b1f2e;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #e0e1dd;
-    line-height: 1.6;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #f1f1f1;
+    max-width: 800px;
+    width: 100%;
 }
 
 .documentation h1 {
-    color: #fca311;
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #4caf50;
+    margin-bottom: 10px;
     font-weight: 700;
+    text-align: center;
+}
+
+.documentation p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #dcdcdc;
+    text-align: center;
 }
 
 .keywordList {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1rem;
 }
 
 .keywordList li {
-    margin: 12px 0;
+    background-color: #252839;
+    border: 1px solid #333;
     padding: 15px;
-    border-left: 4px solid #fca311;
-    background-color: #1f4068;
-    border-radius: 6px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.keywordList li:hover {
+    transform: scale(1.02);
+}
+
+.keywordList strong {
+    color: #4caf50;
 }
 
 .keywordList em {
-    font-style: normal;
-    color: #a8dadc;
+    color: #ddd;
+    font-style: italic;
 }
 
-.keywordList code {
-    background-color: #2a4f7a;
-    padding: 3px 6px;
-    border-radius: 4px;
-    color: #f1faee;
-    font-size: 0.95em;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .documentation {
+        padding: 15px;
+    }
+
+    .keywordList li {
+        font-size: 0.9em;
+    }
 }

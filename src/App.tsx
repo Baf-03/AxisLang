@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import Documentation from './components/Documentation';
 import Compiler from './components/Compiler';
