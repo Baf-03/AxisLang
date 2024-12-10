@@ -30,52 +30,169 @@
     border: 1px solid #333;
 }
 
+
 .button {
-    padding: 12px 24px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    align-self: center;
-    font-weight: 600;
+  padding: 12px 24px;
+  font-size: 1em;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 
 .output {
-    background-color: #252839;
-    color: #dcdcdc;
-    padding: 12px;
-    font-size: 0.95em;
-    border-radius: 8px;
-    white-space: pre-wrap;
-    min-height: 60px;
-    font-family: monospace;
-    border: 1px solid #333;
+  background-color: #252839;
+  color: #dcdcdc;
+  padding: 12px;
+  font-size: 0.95em;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  min-height: 60px;
+  font-family: monospace;
+  border: 1px solid #333;
+  overflow-x: auto;
 }
 
-/* Responsive Design */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.table th,
+.table td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+.table td {
+  color: #dcdcdc;
+}
+
+.tokenList {
+  list-style: none;
+  padding: 0;
+}
+
+.tokenList li {
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #333;
+  color: #f8f8f2;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.tokenList strong {
+  color: #4caf50;
+}
+
+@media (max-width: 1024px) {
+  .compiler {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .editor {
+    height: 250px;
+    font-size: 0.9em;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .output {
+    font-size: 0.9em;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+    font-size: 0.85em;
+  }
+
+  .tokenList li {
+    font-size: 0.9em;
+    padding: 6px;
+  }
+}
+
 @media (max-width: 768px) {
-    .compiler {
-        padding: 15px;
-    }
+  .compiler {
+    padding: 10px;
+  }
 
-    .editor {
-        height: 250px;
-        font-size: 0.9em;
-    }
+  .editor {
+    height: 200px;
+    font-size: 0.85em;
+  }
 
-    .button {
-        width: 100%;
-    }
+  .button {
+    width: 100%;
+    font-size: 0.85em;
+  }
 
-    .output {
-        font-size: 0.85em;
-    }
+  .output {
+    font-size: 0.85em;
+  }
+
+  .table th,
+  .table td {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .tokenList li {
+    font-size: 0.85em;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compiler h2 {
+    font-size: 1.5em;
+  }
+
+  .editor {
+    height: 180px;
+    font-size: 0.8em;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 0.8em;
+  }
+
+  .output {
+    font-size: 0.8em;
+  }
+
+  .table th,
+  .table td {
+    padding: 4px;
+    font-size: 0.75em;
+  }
+
+  .tokenList li {
+    font-size: 0.8em;
+    padding: 4px;
+  }
 }
